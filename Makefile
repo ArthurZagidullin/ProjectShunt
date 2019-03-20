@@ -1,4 +1,4 @@
 build_win:
-	env GOOS=windows GOARCH=amd64 go build ./server
+	env GOOS=windows GOARCH=amd64 go build -o ./cmd/winserver.exe ./server
 build:
-	go build  ./server
+	go build -o ./cmd/linserver ./server
