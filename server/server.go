@@ -25,6 +25,8 @@ func UDPlisten() {
 	ServerAddr,err := net.ResolveUDPAddr("udp",":10001")
 	CheckError(err)
 
+	fmt.Println("UDP :10001")
+
 	/* Now listen at selected port */
 	ServerConn, err := net.ListenUDP("udp", ServerAddr)
 	CheckError(err)
@@ -91,11 +93,12 @@ func WSlisten()  {
 	//	m.Broadcast(msg)
 	//})
 
-	http.ListenAndServe(":5000", sever)
+	http.ListenAndServe(":50000", sever)
+	fmt.Println("HTTP :50000")
+
 }
 
 func main() {
-
 	go UDPlisten()
 	WSlisten()
 }
