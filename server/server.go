@@ -92,9 +92,9 @@ func WSlisten()  {
 	//m.HandleMessage(func(s *melody.Session, msg []byte) {
 	//	m.Broadcast(msg)
 	//})
+	fmt.Println("HTTP :50000")
 
 	http.ListenAndServe(":50000", sever)
-	fmt.Println("HTTP :50000")
 
 }
 
